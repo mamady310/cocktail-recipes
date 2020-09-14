@@ -6,7 +6,7 @@ export const SingleCocktail = () => {
     const {id} = useParams();
     return (
         <div>
-            Hello from cocktail page id :(id)
+            Hello from cocktail page id : {id}
         </div>
     )
 }

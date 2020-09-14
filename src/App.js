@@ -5,12 +5,13 @@ import Error from './pages/Error';
 import About from './pages/About';
 import SingleCocktail from './pages/SingleCocktail';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-
+import Navbar from './components/Navbar';
 
 
 export const Cocktail = () => {
     return (
         <Router>
+        <Navbar />
         <Switch>
           <Route exact path="/">
             <Home />
