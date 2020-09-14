@@ -3,17 +3,29 @@ import './App.css';
 import Home from './pages/Home';
 import Error from './pages/Error';
 import About from './pages/About';
-import SingleCocktail from './pages/SingleCocktail';
-import { BrowserRouter as Router, Switch, Router} from 'react-router-dom';
+// import SingleCocktail from './pages/SingleCocktail';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-export function App() {
-  return 
-    <Router>
 
-    </Router>
-  
+
+export const Cocktail = () => {
+    return (
+        <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="*">
+            <Error />
+          </Route>
+          </Switch>
+        </Router>
+    )
 }
 
-export default App;
+export default Cocktail;
 
 
