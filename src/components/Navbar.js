@@ -1,7 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-export default function Navbar () {
-    return <h1>
-        Hello from Navbar page
-    </h1>
+export const Navbar = () => {
+    return (
+        <div>
+            
+        </div>
+    )
 }
+
+export default Navbar;

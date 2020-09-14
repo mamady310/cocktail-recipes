@@ -1,7 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-export default function Error () {
-    return <h1>
-        Hello from Error page
-    </h1>
+export const Error = () => {
+    return (
+        <div>
+            
+        </div>
+    )
 }
+
+export default Error;
