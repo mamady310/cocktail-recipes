@@ -5,7 +5,7 @@ import SearchForm from '../components/SearchForm';
 export const Home = () => {
     //using react hooks
     const [loading, setLoading] = React.useState(false);
-    const [searchTerm, setSearchTerm] = React.useState('gin');
+    const [searchTerm, setSearchTerm] = React.useState('');
     const [cocktails, setCocktails] = React.useState([]);
 
     //http get request

@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
 
 
-export const Cocktail = () => {
+export const App = () => {
     return (
         <Router>
         <Navbar />
@@ -30,6 +30,6 @@ export const Cocktail = () => {
     )
 }
 
-export default Cocktail;
+export default App;
 
 
