@@ -10,7 +10,7 @@ export const Home = () => {
 
     //http get request
     React.useEffect(() => {
-
+        setLoading(true);
         async function getCocktails (){
         try {
             const response = await 
@@ -37,6 +37,7 @@ export const Home = () => {
         } catch (error) {
             console.log(error);
         }
+        setLoading(false);
     }
     getCocktails();      
     }, [searchTerm]);
