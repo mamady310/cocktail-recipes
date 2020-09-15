@@ -1,10 +1,17 @@
-import React from 'react'
+import React from 'react';
+import CocktailsList from '../components/CocktailList';
+import SearchForm from '../components/SearchForm';
 
 export const Home = () => {
+    //using react hooks
+    const [loading, setLoading] = React.useState(false);
+    const [searchTerm, setSearchTerm] = React.useState('a');
+    const [cocktails, setCocktails] = React.useState([]);
     return (
-        <div>
-            Hello from hompeage
-        </div>
+        <main>
+            <SearchForm setSearchTerm={setSearchTerm}/>
+            <CocktailsList loading={loading} cocktails={cocktails} />
+        </main>
     )
 }
 
