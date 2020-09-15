@@ -1,6 +1,7 @@
 import React from 'react'
 
-export const CocktailList = () => {
+export const CocktailList = (cocktails) => {
+    console.log(cocktails);
     return (
         <div>
             

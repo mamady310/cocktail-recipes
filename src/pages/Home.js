@@ -9,8 +9,8 @@ export const Home = () => {
     const [cocktails, setCocktails] = React.useState([]);
     //http get request
     React.useEffect(()=>{
-        fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita').then(res => res.json()).then(data => console.log(data));
-    }, [])
+        fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita').then(res => res.json()).then(data => setCocktails(data.drinks));
+    }, []);
     return (
         <main>
             <SearchForm setSearchTerm={setSearchTerm}/>
