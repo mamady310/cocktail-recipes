@@ -20,9 +20,19 @@ export const Home = () => {
         const { drinks } = data;
         // console.log(drinks);
         if(drinks) {
-            console.log(drinks);
+            const newDrinks = drinks.map(item => {
+                const {idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass} = item;
+                return {
+                    id: idDrink,
+                    name: strDrink,
+                    images: strDrinkThumb,
+                    info: strAlcoholic,
+                    glass: strGlass,
+                }
+            });
+        setCocktails(newDrinks);
         } else {
-            console.log('noooo!!!');
+            setCocktails([])
         }
         } catch (error) {
             console.log(error);
