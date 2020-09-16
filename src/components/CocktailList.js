@@ -1,7 +1,7 @@
-import { findAllByTitle } from '@testing-library/react'
-import React from 'react'
+import React from 'react';
+import Cocktail from './Cocktail';
 
-export const CocktailList = (cocktails,loading) => {
+export const CocktailList = ({cocktails, loading}) => {
     if (loading) {
         return  <h2 className="section-title"> Loading...</h2>
     } 
@@ -13,9 +13,14 @@ export const CocktailList = (cocktails,loading) => {
         );
     }
     return (
-        <div>
-            hello from CocktailList
-        </div>
+       <section className="section">
+       <h2 className="section-title">Cocktails</h2>
+       <div className="cocktails-center">
+        {cocktails.map(item => {
+            return <Cocktail key={item.id} {...item} />;
+        })}
+       </div>
+       </section>
     )
 }
 
