@@ -14,8 +14,19 @@ export const SingleCocktail = () => {
             try {
                 const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
                 const data = await response.json();
+                // console.log(data.drinks);
                 if(data.drinks) {
-
+                const {
+                    strDrink: name,
+                    strDrinkThumb: image,
+                    strCategory: category,
+                    strGlass: glass,
+                    strInstructions: instructions,
+                    strIngredient1, strIngredient2, 
+                    strIngredient3,
+                    strIngredient4,
+                    strIngredient5,
+                } = data.drinks[0]
                 } else {
                     setCocktail(null);
                 }
@@ -24,6 +35,7 @@ export const SingleCocktail = () => {
                 setLoading(false);
             }
         }
+        getCocktail();
     }, [id])
     return (
         <div>
