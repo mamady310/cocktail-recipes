@@ -15,18 +15,29 @@ export const SingleCocktail = () => {
                 const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
                 const data = await response.json();
                 // console.log(data.drinks);
+                // setting alias equal to properties to return from get request
                 if(data.drinks) {
                 const {
                     strDrink: name,
                     strDrinkThumb: image,
                     strCategory: category,
                     strGlass: glass,
+                    strAlcoholic: info,
                     strInstructions: instructions,
                     strIngredient1, strIngredient2, 
                     strIngredient3,
                     strIngredient4,
-                    strIngredient5,
-                } = data.drinks[0]
+                    strIngredient5
+                } = data.drinks[0];
+                  // array for ingredients
+                    const ingredients = [    strIngredient1,  
+                    strIngredient2, 
+                    strIngredient3,
+                    strIngredient4,
+                    strIngredient5];
+                    // creating new cocktail
+                    const newDrinks = {name, image, info, category, glass, instructions, ingredients};
+                    setCocktail(newDrinks);
                 } else {
                     setCocktail(null);
                 }
