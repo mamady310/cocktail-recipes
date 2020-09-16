@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams , Link} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 export const SingleCocktail = () => {
     // console.log(useParams());
@@ -53,9 +53,30 @@ export const SingleCocktail = () => {
     }if (!cocktail) {
         return <h2>No Cocktail to Display</h2>
     }
+    else {
+        const{name, image, category, info, glass, instructions, ingredients}= cocktail;
+        return <section className="section cocktail-section">
+            {/* <Link to="/" className="btn btn-primary"> Home </Link> */}
+            <h2>{name}</h2>
+            <div className="drink">
+             <img src={image} alt={name} />
+             <div>
+                 <p>Name: {name}</p>
+                 <p>Category: {category}</p>
+                 <p>Info: {info}</p>
+                 <p>Glass: {glass}</p>
+                 <p>Instructions: {instructions}</p>
+                 <p>Ingredients :{" "}
+                 {ingredients.map((item, index)=> {
+                         return item? <span key={index}>{item}</span>: null;
+                     })}</p>
+             </div>
+            </div>
+        </section>
+    }
     return (
         <div>
-            Hello from cocktail page id : {id}
+        
         </div>
     )
 }
