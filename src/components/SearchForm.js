@@ -3,8 +3,10 @@ import React from 'react';
 export const SearchForm = ({setSearchTerm}) => {
     const searchValue = React.useRef("");
     console.log(searchValue);
-    const handleSubmit = () => {
-
+    // prevent page from refreshing when hit enter in search
+    const handleSubmit = (e) => {
+    e.preventDefault();
+    
     };
     // user input is captured
     const searchDrinks = () => {
