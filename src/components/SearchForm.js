@@ -1,11 +1,12 @@
 import React from 'react';
 
 export const SearchForm = ({setSearchTerm}) => {
+    
     const searchValue = React.useRef("");
-
+    // when component mounts the focus is on the search form; set to empty array so that it runs once
     React.useEffect(() => {
-        
-    })
+        searchValue.current.focus();
+    }, []);
     console.log(searchValue);
     // prevent page from refreshing when hit enter in search
     const handleSubmit = (e) => {

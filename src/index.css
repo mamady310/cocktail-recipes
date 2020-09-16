@@ -1,0 +1,13 @@
+
+
+
+/* Begin Error Page */
+.error-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    }
+    .booze{
+    width: 400px;
+    }
+    /* End Error Page */
