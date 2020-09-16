@@ -1,4 +1,11 @@
-
+body {
+    font-family: sans-serif;
+    color: #222;
+    background: #f8f8f8;
+    line-height: 1.4;
+    font-size: 1rem;
+    font-weight: 300;
+}
 
 
 /* Begin Error Page */

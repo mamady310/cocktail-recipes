@@ -3,6 +3,6 @@ This is a project that will will display cocktails on the homepage. When a user 
 
 ## Technologies Used
 React
-Bootstrap
+
 
 
