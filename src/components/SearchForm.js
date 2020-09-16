@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-export const SearchForm = ({setSearchterm}) => {
+export const SearchForm = ({setSearchTerm}) => {
+    const searchValue = React.useRef("");
+    console.log(searchValue);
     const handleSubmit = () => {
+
+    }
+    const searchDrinks = () => {
 
     }
 
@@ -11,7 +16,7 @@ export const SearchForm = ({setSearchterm}) => {
         <form className="form search-form" onSubmit={handleSubmit}>
             <div className="form-control">
             <label> search </label>
-            <input type="text" name="name" id="name"></input>
+            <input type="text" name="name" id="name" onChange={searchDrinks}></input>
             </div>
         </form>
         </section>
