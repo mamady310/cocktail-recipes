@@ -2,6 +2,10 @@ import React from 'react';
 
 export const SearchForm = ({setSearchTerm}) => {
     const searchValue = React.useRef("");
+
+    React.useEffect(() => {
+        
+    })
     console.log(searchValue);
     // prevent page from refreshing when hit enter in search
     const handleSubmit = (e) => {
