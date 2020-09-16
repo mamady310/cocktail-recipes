@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams , Link} from 'react-router-dom';
 
 export const SingleCocktail = () => {
     // console.log(useParams());
@@ -43,11 +43,16 @@ export const SingleCocktail = () => {
                 }
             } catch (error) {
                 console.log(error);
-                setLoading(false);
-            }
+            } 
+            setLoading(false);
         }
         getCocktail();
     }, [id])
+    if(loading) {
+        return <h2 className="section-title">Loading...</h2>
+    }if (!cocktail) {
+        return <h2>No Cocktail to Display</h2>
+    }
     return (
         <div>
             Hello from cocktail page id : {id}
