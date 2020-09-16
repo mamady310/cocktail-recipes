@@ -5,7 +5,7 @@ export const Cocktail = ({images, name, id, info, glass }) => {
     return (
        <article className="cocktail">
        <div className="img-container">
-           <img src={images} />
+           <img src={images} alt="drink"/>
        </div>
        <div className="cocktail-footer">
            <h3>{name}</h3>

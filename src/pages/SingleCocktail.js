@@ -74,11 +74,7 @@ export const SingleCocktail = () => {
             </div>
         </section>
     }
-    return (
-        <div>
-        
-        </div>
-    )
+  
 }
 
 export default SingleCocktail;
